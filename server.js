@@ -48,7 +48,7 @@ app.use(
 );
 
 app.post("/pay", function(req, res) {
-  let amount = 50 * 100;
+  let amount = req.body.amount;
 
   // create a customer
   stripe.customers

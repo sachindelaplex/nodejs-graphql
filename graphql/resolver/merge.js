@@ -50,6 +50,34 @@ const transformBooking = booking => {
     updatedAt: dateToString(booking._doc.updatedAt)
   };
 };
+
+const transformItems = item => {
+  return {
+    ...item._doc
+  };
+};
+const transformBrand = brand => {
+  return {
+    ...brand._doc
+  };
+};
+
+const transformCategory = category => {
+  return {
+    ...category._doc
+  };
+};
+
+const transformAttribute = attribute => {
+  return {
+    ...attribute._doc
+  };
+};
+
+exports.transformItems = transformItems;
+exports.transformBrand = transformBrand;
+exports.transformCategory = transformCategory;
+exports.transformAttribute = transformAttribute;
 exports.transformBooking = transformBooking;
 exports.transformEvent = transformEvent;
 //   exports.user = user;
